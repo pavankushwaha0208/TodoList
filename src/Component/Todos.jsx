@@ -9,11 +9,10 @@ const Todos = () => {
      const dispatch = useDispatch()
   return (
     <>
-    <div>Todos</div>
     <ul className="list-none">
         {todos.map((todo) => (
           <li
-            className="mt-4 flex justify-between items-center bg-zinc-800 px-4 py-2 rounded"
+            className="mt-4 flex justify-between items-center bg-zinc-800 px-4 py-2 rounded w-screen"
             key={todo.id}
           >
             <div className='text-white'>{todo.text}</div>
