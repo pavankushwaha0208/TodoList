@@ -20,16 +20,15 @@ const Edittodo = () => {
 const TodoItem = ({ todo, dispatch }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [updatedText, setUpdatedText] = useState(todo.text);
-
   const handleEditClick = () => {
     setIsEditing(true);
   };
 
   const handleSaveClick = () => {
-    // Dispatch the editTodo action with the updated text and todo's ID
     dispatch(editTodo({ id: todo.id, newText: updatedText }));
     setIsEditing(false);
   };
+
 
   return (
     <li className="mt-4 flex justify-between items-center bg-zinc-800 px-4 py-2 rounded w-screen">
